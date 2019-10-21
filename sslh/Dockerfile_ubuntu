@@ -1,0 +1,20 @@
+FROM ubuntu:18.04
+MAINTAINER zhoujunqian <zjqzero@gmail.com>
+
+ENV DEBIAN_FRONTEND noninteractive
+ENV SSH_HOST localhost
+ENV SSH_PORT 22
+ENV HTTP_HOST localhost
+ENV HTTP_PORT 8080
+ENV HTTPS_HOST localhost
+ENV HTTPS_PORT 443
+ENV ANY_HOST localhost
+ENV ANY_PORT 6188
+
+RUN apt update \
+    && apt install -y --no-install-recommends sslh \
+    && rm -rf /var/lib/apt/lists/* /var/cache/apt/* /tmp/*
+
+CMD sslh -f -u root -p 0.0.0.0:80 --ssh $SSH_HOST:$SSH_PORT --http $HTTP_HOST:$HTTP_PORT --ssl $HTTPS_HOST:$HTTPS_PORT --anyprot $ANY_HOST:$ANY_PORT
+
+EXPOSE 80

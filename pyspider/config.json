@@ -1,0 +1,11 @@
+{
+  "taskdb": "sqlalchemy+mysql+pymysql+taskdb://root:Passw0rd@mariadb/taskdb",
+  "projectdb": "sqlalchemy+mysql+pymysql+projectdb://root:Passw0rd@mariadb/projectdb",
+  "resultdb": "sqlalchemy+mysql+pymysql+resultdb://root:Passw0rd@mariadb/resultdb",
+  "webui": {
+    "port": 5000,
+    "username": "admin",
+    "password": "Passw0rd",
+    "need-auth": true
+  }
+}

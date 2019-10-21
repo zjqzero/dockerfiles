@@ -1,0 +1,11 @@
+st-ssh:
+    container_name: st-ssh
+    image: daocloud.io/zjqzero/img:stunnel
+    ports:
+        - 18822:5000
+    volumes:
+        - /var/stunnel/certs:/var/stunnel/certs
+        - /var/stunnel/conf/ssh.conf:/etc/stunnel/stunnel.conf
+    restart: "always"
+    labels:
+        - traefik.enable=false

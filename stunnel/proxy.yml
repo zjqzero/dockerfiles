@@ -1,0 +1,16 @@
+HTTP_PROXY:
+    image: zjqzero/squid:latest
+    container_name: squid
+    restart: "always"
+
+stunnel:
+    image: zjqzero/stunnel:latest
+    container_name: stunnel
+    restart: "always"
+    ports:
+        - "18888:5000"
+    links:
+        - HTTP_PROXY
+    volumes:
+        - /var/stunnel/certs:/var/stunnel/certs
+        - /var/stunnel/conf/stunnel.conf:/etc/stunnel/stunnel.conf

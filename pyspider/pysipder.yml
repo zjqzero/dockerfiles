@@ -1,0 +1,78 @@
+spider-js:
+  image: daocloud.io/zjqzero/base:pyspider-19.0509
+  restart: always
+  cpuset: "16,17,18,19"
+  container_name: "spider-js"
+  mem_limit: 512m
+  volumes:
+    - /var/data/pyspider/config.json:/etc/pyspider.json
+  command: -c /etc/pyspider.json phantomjs
+  labels:
+    - traefik.enable=false
+
+
+spider-result:
+  image: daocloud.io/zjqzero/base:pyspider-19.0509
+  restart: always
+  cpuset: "16,17,18,19"
+  container_name: "spider-r"
+  volumes:
+    - /var/data/pyspider/config.json:/etc/pyspider.json
+  command: -c /etc/pyspider.json result-worker
+  labels:
+    - traefik.enable=false
+
+
+spider-processor:
+  image: daocloud.io/zjqzero/base:pyspider-19.0509
+  restart: always
+  cpuset: "16,17,18,19"
+  container_name: "spider-p"
+  volumes:
+    - /var/data/pyspider/config.json:/etc/pyspider.json
+  command: -c /etc/pyspider.json processor
+  labels:
+    - traefik.enable=false
+
+
+spider-fetcher:
+  image: daocloud.io/zjqzero/base:pyspider-19.0509
+  restart: always
+  cpuset: "16,17,18,19"
+  container_name: "spider-f"
+  links:
+    - spider-js:phantomjs
+  volumes:
+    - /var/data/pyspider/config.json:/etc/pyspider.json
+  command: -c /etc/pyspider.json fetcher
+  labels:
+    - traefik.enable=false
+
+
+spider-scheduler:
+  image: daocloud.io/zjqzero/base:pyspider-19.0509
+  restart: always
+  cpuset: "16,17,18,19"
+  container_name: "spider-s"
+  volumes:
+    - /var/data/pyspider/config.json:/etc/pyspider.json
+  command: -c /etc/pyspider.json scheduler
+  labels:
+    - traefik.enable=false
+
+
+spider-webui:
+  image: daocloud.io/zjqzero/base:pyspider-19.0509
+  restart: always
+  cpuset: "16,17,18,19"
+  container_name: "spider-ui"
+  links:
+    - spider-scheduler:scheduler
+    - spider-js:phantomjs
+  ports: 
+    - 8000:5000
+  volumes:
+    - /var/data/pyspider/config.json:/etc/pyspider.json
+  command: -c /etc/pyspider.json webui
+  labels:
+    - traefik.enable=false

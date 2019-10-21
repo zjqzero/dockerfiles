@@ -1,0 +1,9 @@
+ss:
+  image: zjqzero/ss
+  container_name: "ss"
+  restart: always
+  ports:
+    - 3128:3128
+  volumes:
+    - /var/data/ss/config.json:/etc/shadowsocks.json
+  command: ss-local -c /etc/shadowsocks.json

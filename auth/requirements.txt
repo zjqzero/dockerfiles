@@ -1,0 +1,14 @@
+flask
+flask-sqlalchemy
+flask-restless
+flask-script
+flask-migrate
+flask-caching
+flask_cors
+flask-jwt
+flask-user
+logbook
+raven
+marshmallow
+sqlalchemy
+pymysql

@@ -1,0 +1,15 @@
+flask
+flask-apscheduler
+flask-caching
+flask_cors
+requests
+logbook
+raven
+marshmallow
+mongoengine
+redis
+hiredis
+lxml
+tushare
+bs4
+blinker
