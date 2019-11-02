@@ -1,10 +1,10 @@
 HTTP_PROXY:
-    image: zjqzero/squid:latest
+    image: zjqzero/squid
     container_name: squid
     restart: "always"
 
 stunnel:
-    image: zjqzero/stunnel:latest
+    image: zjqzero/stunnel
     container_name: stunnel
     restart: "always"
     ports:

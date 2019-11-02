@@ -1,6 +1,6 @@
 st-ssh:
     container_name: st-ssh
-    image: daocloud.io/zjqzero/img:stunnel
+    image: zjqzero/stunnel
     ports:
         - 18822:5000
     volumes:
