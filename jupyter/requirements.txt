@@ -45,4 +45,3 @@ dill
 
 pdfminer.six
 baidu-aip
-pandarallel
