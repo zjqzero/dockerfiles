@@ -46,3 +46,4 @@ dill
 
 pdfminer.six
 baidu-aip
+mpl_finance
