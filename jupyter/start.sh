@@ -14,5 +14,5 @@ IFS=$'\n\t'
 HASH=$(python3 -c "from IPython.lib import passwd; print(passwd('${PASSWORD}'))")
 unset PASSWORD
 
-jupyter notebook --allow-root --no-browser --port 8888 --ip=0.0.0.0 --certfile=$PEM_FILE --NotebookApp.password="$HASH"
+jupyter $JUPYTER --allow-root --no-browser --port 8888 --ip=0.0.0.0 --certfile=$PEM_FILE --NotebookApp.password="$HASH"
 unset HASH
