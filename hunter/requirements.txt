@@ -30,3 +30,4 @@ lxml
 bs4
 rethinkdb
 delayqueue
+python-socketio
