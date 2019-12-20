@@ -33,6 +33,7 @@ numpy
 pandas
 simplejson
 dill
+python-socketio
 
 tushare
 pdfminer.six
