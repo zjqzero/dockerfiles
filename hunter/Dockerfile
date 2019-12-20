@@ -20,8 +20,8 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
     && make install \
     && cd .. \
     && rm -rf ta-lib.tar.gz ta-lib \
-    && pip3 install --no-cache-dir numpy uwsgi supervisor -i https://pypi.douban.com/simple \
     && pip3 install --no-cache-dir -r /requirements.txt -i https://pypi.douban.com/simple \
+    && pip3 install --no-cache-dir uwsgi supervisor -i https://pypi.douban.com/simple \
     && apk del wget python3-dev build-base linux-headers fortify-headers libxml2-dev libxslt-dev \
                libc-dev musl-dev openssl-dev zlib-dev libffi-dev \
     && rm -rf /var/cache/apk/* /tmp/* /requirements.txt

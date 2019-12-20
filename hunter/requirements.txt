@@ -10,15 +10,14 @@ apscheduler
 pymongo
 logbook
 raven
-pandas
 numpy
+pandas
 marshmallow
 mongoengine
 redis
 hiredis
 celery
 kombu
-transitions
 blinker
 ta-lib
 pyexcel-xls
@@ -29,5 +28,3 @@ jinja2
 lxml
 bs4
 rethinkdb
-delayqueue
-python-socketio
