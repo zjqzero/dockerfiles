@@ -11,25 +11,16 @@ yapf
 alphalens
 scikit-learn
 
-flask
-flask-apscheduler
-flask-sqlalchemy
 flask-caching
-flask_cors
-flask-jwt
-flask-user
-flask-excel
 requests
 apscheduler
 pymongo
 logbook
 loguru
-raven
 marshmallow
 mongoengine
 redis
 hiredis
-celery
 aiohttp
 transitions
 blinker
@@ -38,12 +29,12 @@ sqlalchemy
 pymysql
 lxml
 bs4
-pyexcel-xls
-pyexcel-xlsx
 rethinkdb
-python-redis-lock
 dill
+tushare
 
 pdfminer.six
 baidu-aip
 mpl_finance
+plotly
+bamboolib
