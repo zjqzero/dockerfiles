@@ -13,3 +13,5 @@ lxml
 tushare
 bs4
 blinker
+numpy
+pandas
