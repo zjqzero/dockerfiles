@@ -21,7 +21,7 @@ RUN sed -i 's/archive.ubuntu.com/mirrors.163.com/g' /etc/apt/sources.list \
     && echo "Asia/Shanghai" > /etc/timezone \
     && chmod 755 start.sh \
     && apt install -y --no-install-recommends build-essential python3 python3-dev python3-pip python3-setuptools qpdf \
-    && pip3 install --no-cache-dir jupyter ipython -i https://pypi.douban.com/simple \
+    && pip3 install --no-cache-dir jupyter ipython numpy -i https://pypi.douban.com/simple \
     && pip3 install --no-cache-dir jupyter_contrib_nbextensions -i https://pypi.douban.com/simple \
     && jupyter contrib nbextension install --user \
     && wget --no-check-certificate http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz -O ta-lib.tar.gz \
