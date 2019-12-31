@@ -36,5 +36,3 @@ tushare
 pdfminer.six
 baidu-aip
 mpl_finance
-plotly
-bamboolib
