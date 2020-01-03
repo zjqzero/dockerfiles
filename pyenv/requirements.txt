@@ -39,7 +39,6 @@ grpcio-tools
 tushare
 pdfminer.six
 baidu-aip
-pytdx
 ipython
 matplotlib
 loguru
