@@ -26,7 +26,7 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
     && pip3 install --no-cache-dir -r /requirements.txt -i https://pypi.douban.com/simple \
     && apk del wget python3-dev build-base linux-headers fortify-headers libxml2-dev libxslt-dev \
                libc-dev musl-dev openssl-dev zlib-dev libffi-dev \
-    && rm -rf /var/cache/apk/* /tmp/* /requirements.txt
+    && rm -rf /var/cache/apk/* /tmp/* /requirements.txt \
     && chmod +x /*.sh
 
 EXPOSE 22 5000
