@@ -42,7 +42,6 @@ baidu-aip
 pytdx
 ipython
 matplotlib
-pymssql==2.1.4
 loguru
 pypinyin
 scipy
