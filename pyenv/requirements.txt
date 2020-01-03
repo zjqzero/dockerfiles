@@ -33,7 +33,8 @@ numpy
 pandas
 simplejson
 dill
-python-socketio
+grpcio
+grpcio-tools
 
 tushare
 pdfminer.six
