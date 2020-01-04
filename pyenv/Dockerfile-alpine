@@ -11,7 +11,7 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
     && apk update \
     && apk add --no-cache python3 libstdc++ libxslt tzdata wget openssh-server git \
                           python3-dev build-base linux-headers fortify-headers libxml2-dev libxslt-dev \
-                          libc-dev musl-dev openssl-dev zlib-dev libffi-dev lapack-dev blas-dev \
+                          libc-dev musl-dev openssl-dev zlib-dev libffi-dev lapack-dev blas-dev gfortran \
     && mkdir -p /var/run/sshd \
     && echo "Asia/Shanghai" > /etc/timezone \
     && wget --no-check-certificate http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz -O ta-lib.tar.gz \
@@ -26,7 +26,7 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
     && pip3 install --no-cache-dir -r /requirements.txt -i https://pypi.douban.com/simple \
     && pip3 install https://github.com/rainx/pytdx/archive/master.zip \
     && apk del wget python3-dev build-base linux-headers fortify-headers libxml2-dev libxslt-dev \
-               libc-dev musl-dev openssl-dev zlib-dev libffi-dev lapack-dev blas-dev \
+               libc-dev musl-dev openssl-dev zlib-dev libffi-dev lapack-dev blas-dev gfortran \
     && rm -rf /var/cache/apk/* /tmp/* /requirements.txt \
     && chmod +x /*.sh
 
