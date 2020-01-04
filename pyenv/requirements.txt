@@ -34,6 +34,7 @@ pandas
 simplejson
 dill
 grpcio
+protobuf
 grpcio-tools
 
 tushare
