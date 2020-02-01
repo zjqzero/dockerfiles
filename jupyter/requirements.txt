@@ -37,3 +37,4 @@ pdfminer.six
 baidu-aip
 mpl_finance
 pandarallel
+pydotplus
