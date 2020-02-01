@@ -16,7 +16,7 @@ ADD matplotlibrc /matplotlibrc
 
 RUN sed -i 's/archive.ubuntu.com/mirrors.163.com/g' /etc/apt/sources.list \
     && apt update \
-    && apt install -y --no-install-recommends wget language-pack-zh-hans-base \
+    && apt install -y --no-install-recommends wget language-pack-zh-hans-base graphviz \
     && locale-gen en_US.UTF-8 \
     && echo "Asia/Shanghai" > /etc/timezone \
     && chmod 755 start.sh \
