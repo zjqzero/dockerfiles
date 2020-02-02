@@ -6,6 +6,7 @@ numpy
 scipy
 statsmodels
 matplotlib
+seaborn
 pandas
 yapf
 alphalens
