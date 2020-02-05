@@ -1,0 +1,11 @@
+flask
+flask-apscheduler
+flask-caching
+flask-socketio
+requests
+apscheduler
+logbook
+redis
+pypinyin
+pandas
+loguru
