@@ -7,5 +7,4 @@ apscheduler
 logbook
 redis
 pypinyin
-pandas
 loguru
