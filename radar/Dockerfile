@@ -18,7 +18,7 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
                libc-dev musl-dev openssl-dev zlib-dev libffi-dev \
     && rm -rf /var/cache/apk/* /tmp/* /requirements.txt
 
-WORKDIR /var/hunter
+WORKDIR /var/radar
 
 EXPOSE 5000 5001
 
