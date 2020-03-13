@@ -47,4 +47,4 @@ pypinyin
 scipy
 statsmodels
 alphalens
-mpl_finance
+mplfinance
