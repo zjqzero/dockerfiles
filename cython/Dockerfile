@@ -9,3 +9,5 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
     && pip3 install --no-cache-dir cython -i https://pypi.douban.com/simple \
     && chmod 755 build.sh \
     && rm -rf /var/cache/apk/* /tmp/*
+
+CMD ["/build.sh"]
