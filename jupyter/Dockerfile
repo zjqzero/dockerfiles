@@ -33,9 +33,9 @@ RUN sed -i 's/archive.ubuntu.com/mirrors.163.com/g' /etc/apt/sources.list \
     && cd .. \
     && rm -rf ta-lib.tar.gz ta-lib \
     && pip3 install --no-cache-dir -r /requirements.txt -i https://pypi.douban.com/simple \
-    && mv /matplotlibrc /usr/local/lib/python3.7/dist-packages/matplotlib/mpl-data/matplotlibrc \
+    && mv /matplotlibrc /usr/local/lib/python3.8/dist-packages/matplotlib/mpl-data/matplotlibrc \
     && wget --no-check-certificate http://d.xiazaiziti.com/en_fonts/fonts/s/SimSun.ttf \
-    && mv SimSun.ttf /usr/local/lib/python3.7/dist-packages/matplotlib/mpl-data/fonts/ttf/SimSum.ttf \
+    && mv SimSun.ttf /usr/local/lib/python3.8/dist-packages/matplotlib/mpl-data/fonts/ttf/SimSum.ttf \
     && apt purge -y wget build-essential python3-dev \
     && apt autoremove -y --purge \
     && rm -rf /var/lib/apt/lists/* /var/cache/apt/* /tmp/* \
