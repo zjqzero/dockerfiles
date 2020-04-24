@@ -25,4 +25,5 @@ psycopg2-binary
 elasticsearch
 tblib
 wsgidav==2.4.1
+werkzeug==0.16.1
 pandas
