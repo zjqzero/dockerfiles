@@ -1,4 +1,4 @@
-FROM ubuntu:19.10
+FROM ubuntu:latest
 
 # So that we can run as unprivileged user inside the container.
 ADD Shanghai /etc/localtime
