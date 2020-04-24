@@ -24,8 +24,8 @@ RUN sed -i 's/archive.ubuntu.com/mirrors.163.com/g' /etc/apt/sources.list \
     && make install \
     && cd .. \
     && rm -rf ta-lib.tar.gz ta-lib \
-    && pip3 install --no-cache-dir numpy lxml -i https://mirrors.aliyun.com/pypi/simple \
-    && pip3 install --no-cache-dir -r /requirements.txt -i https://mirrors.aliyun.com/pypi/simple \
+    && pip3 install --no-cache-dir numpy lxml -i https://pypi.douban.com/simple \
+    && pip3 install --no-cache-dir -r /requirements.txt -i https://pypi.douban.com/simple \
     && apt purge -y wget python3-dev build-essential libxml2-dev \
     && apt autoremove -y --purge \
     && rm -rf /var/lib/apt/lists/* /var/cache/apt/* /tmp/* \
