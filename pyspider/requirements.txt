@@ -11,6 +11,7 @@ tornado
 mysql-connector-python
 pika
 pymongo
+mongoengine
 unittest2
 Flask-Login
 u-msgpack-python
