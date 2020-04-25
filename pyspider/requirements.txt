@@ -12,6 +12,7 @@ mysql-connector-python
 pika
 pymongo
 mongoengine
+blinker
 unittest2
 Flask-Login
 u-msgpack-python
