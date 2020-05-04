@@ -14,7 +14,7 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
     && echo "Asia/Shanghai" > /etc/timezone \
     && pip3 install --no-cache-dir uwsgi supervisor numpy -i https://pypi.douban.com/simple \
     && pip3 install --no-cache-dir -r /requirements.txt -i https://pypi.douban.com/simple \
-    && pip3 install https://github.com/rainx/pytdx/archive/master.zip \
+    && pip3 install --no-cache-dir git+https://github.com/binux/pyspider.git -i https://pypi.douban.com/simple \
     && apk del python3-dev build-base linux-headers fortify-headers libxml2-dev libxslt-dev \
                libc-dev musl-dev openssl-dev zlib-dev libffi-dev \
     && rm -rf /var/cache/apk/* /tmp/* /requirements.txt
