@@ -9,15 +9,14 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
     && apk update \
     && apk add --no-cache python3 libstdc++ libxslt tzdata \
                           python3-dev build-base linux-headers fortify-headers libxml2-dev libxslt-dev \
-                          libc-dev musl-dev openssl-dev zlib-dev libffi-dev curl-dev \
+                          libc-dev musl-dev openssl-dev zlib-dev libffi-dev git curl-dev \
     && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
     && echo "Asia/Shanghai" > /etc/timezone \
     && pip3 install --no-cache-dir uwsgi supervisor numpy -i https://pypi.douban.com/simple \
     && pip3 install --no-cache-dir -r /requirements.txt -i https://pypi.douban.com/simple \
     && pip3 install --no-cache-dir git+https://github.com/binux/pyspider.git -i https://pypi.douban.com/simple \
     && apk del python3-dev build-base linux-headers fortify-headers libxml2-dev libxslt-dev \
-               libc-dev musl-dev openssl-dev zlib-dev libffi-dev git \
-               libc-dev musl-dev openssl-dev zlib-dev libffi-dev curl-dev \
+               libc-dev musl-dev openssl-dev zlib-dev libffi-dev git curl-dev \
     && rm -rf /var/cache/apk/* /tmp/* /requirements.txt
 
 WORKDIR /var/falcon
