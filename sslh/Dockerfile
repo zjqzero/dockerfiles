@@ -15,6 +15,6 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 	&& apk add --no-cache --repository http://dl-3.alpinelinux.org/alpine/edge/testing sslh \
 	&& rm -rf /var/cache/apk/*
 
-CMD sslh -f -u root -p 0.0.0.0:80 --ssh $SSH_HOST:$SSH_PORT --http $HTTP_HOST:$HTTP_PORT --ssl $HTTPS_HOST:$HTTPS_PORT --anyprot $ANY_HOST:$ANY_PORT
+CMD sslh -f -u root -p 0.0.0.0:80 --ssh $SSH_HOST:$SSH_PORT --http $HTTP_HOST:$HTTP_PORT --tls $HTTPS_HOST:$HTTPS_PORT --anyprot $ANY_HOST:$ANY_PORT
 
 EXPOSE 80
