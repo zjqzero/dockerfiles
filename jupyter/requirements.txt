@@ -39,3 +39,4 @@ baidu-aip
 mplfinance
 pandarallel
 pydotplus
+pyforest
