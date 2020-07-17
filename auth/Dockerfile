@@ -7,8 +7,8 @@ ADD uwsgi.ini /etc/uwsgi.ini
 ADD supervisord.conf /etc/supervisord.conf
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories \
     && apk update \
-    && apk add --no-cache python3 libstdc++ libxslt tzdata \
-                          python3-dev build-base linux-headers fortify-headers libxml2-dev libxslt-dev \
+    && apk add --no-cache python3 py3-pip python3-dev libstdc++ libxslt tzdata \
+                          build-base linux-headers fortify-headers libxml2-dev libxslt-dev \
                           libc-dev musl-dev openssl-dev zlib-dev libffi-dev \
     && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
     && echo "Asia/Shanghai" > /etc/timezone \
