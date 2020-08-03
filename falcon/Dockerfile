@@ -1,4 +1,4 @@
-FROM daocloud.io/zjqzero/base:latest
+FROM zjqzero/base:latest
 
 MAINTAINER zhoujunqian <zjqzero@gmail.com>
 
