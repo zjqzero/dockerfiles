@@ -7,9 +7,6 @@ flask-apscheduler
 redis
 hiredis
 mongoengine
-grpcio
-grpcio-tools
-protobuf
 lxml
 numpy
 pandas
