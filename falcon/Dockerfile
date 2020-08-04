@@ -7,9 +7,10 @@ ADD uwsgi.ini /etc/uwsgi.ini
 ADD supervisord.conf /etc/supervisord.conf
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories \
     && apk update \
-    && apk add --no-cache python3 py3-pip python3-dev libstdc++ libxslt tzdata \
-                          build-base linux-headers fortify-headers libxml2-dev libxslt-dev \
-                          libc-dev musl-dev openssl-dev zlib-dev libffi-dev git \
+    && apk add --no-cache --purge python3 python3-dev libstdc++ libxslt tzdata \
+                                  build-base linux-headers fortify-headers libxml2-dev libxslt-dev \
+                                  libc-dev musl-dev openssl-dev zlib-dev libffi-dev git \
+    && python3 -m 'ensurepip' \
     && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
     && echo "Asia/Shanghai" > /etc/timezone \
     && pip3 install --no-cache-dir uwsgi supervisor numpy -i https://pypi.douban.com/simple \
