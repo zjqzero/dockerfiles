@@ -17,7 +17,6 @@ mongoengine
 redis
 hiredis
 celery
-kombu==4.6.11
 blinker
 ta-lib
 pyexcel-xls
