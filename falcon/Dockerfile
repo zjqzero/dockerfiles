@@ -1,12 +1,11 @@
-FROM alpine:latest
+FROM zjqzero/base:latest
 
 MAINTAINER zhoujunqian <zjqzero@gmail.com>
 
 ADD requirements.txt /requirements.txt
 ADD uwsgi.ini /etc/uwsgi.ini
 ADD supervisord.conf /etc/supervisord.conf
-RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories \
-    && apk update \
+RUN apk update \
     && apk add --no-cache --purge -uU python3 python3-dev build-base libstdc++ libxslt tzdata \
                                       linux-headers fortify-headers libxml2-dev libxslt-dev \
                                       libc-dev musl-dev openssl-dev zlib-dev libffi-dev git \
