@@ -1,4 +1,4 @@
-FROM zjqzero/base:latest
+FROM alpine:latest
 
 MAINTAINER zhoujunqian <zjqzero@gmail.com>
 
