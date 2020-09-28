@@ -6,12 +6,9 @@ ADD requirements.txt /requirements.txt
 ADD uwsgi.ini /etc/uwsgi.ini
 ADD supervisord.conf /etc/supervisord.conf
 RUN apk update \
-    && apk add --no-cache --purge -uU python3 python3-dev build-base libstdc++ libxslt tzdata wget \
+    && apk add --no-cache --purge -uU python3-dev build-base libstdc++ libxslt tzdata wget \
                                       linux-headers fortify-headers libxml2-dev libxslt-dev \
                                       libc-dev musl-dev openssl-dev zlib-dev libffi-dev \
-    && python3 -m 'ensurepip' \
-    && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
-    && echo "Asia/Shanghai" > /etc/timezone \
     && wget --no-check-certificate http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz -O ta-lib.tar.gz \
     && tar -xvzf ta-lib.tar.gz \
     && cd ta-lib/ \
