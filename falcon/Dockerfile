@@ -20,4 +20,4 @@ WORKDIR /var/falcon
 
 EXPOSE 5000
 
-CMD ["/usr/bin/supervisord"]
+CMD ["/usr/local/bin/supervisord"]

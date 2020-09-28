@@ -27,4 +27,4 @@ WORKDIR /var/hunter
 
 EXPOSE 5000 5001
 
-CMD ["/usr/bin/supervisord"]
+CMD ["/usr/local/bin/supervisord"]
