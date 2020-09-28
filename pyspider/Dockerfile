@@ -7,7 +7,7 @@ ENV QT_QPA_PLATFORM=offscreen
 COPY requirements.txt /requirements.txt
 
 RUN sed -i "s@http://deb.debian.org@https://mirrors.huaweicloud.com@g" /etc/apt/sources.list \
-    && sed -i "s@http://security.debian.org@https://mirrors.huaweicloud.com@g" /etc/apt/sources.list  \
+    && sed -i "s@http://security.debian.org@https://mirrors.huaweicloud.com@g" /etc/apt/sources.list \
     && apt update \
     && apt install -y --no-install-recommends phantomjs git wget build-essential libcurl4 libxml2-dev \
                                               libxmlsec1-dev libcurl4-openssl-dev libssl-dev \
