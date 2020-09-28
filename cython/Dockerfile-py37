@@ -5,7 +5,7 @@ MAINTAINER zhoujunqian <zjqzero@gmail.com>
 ADD build.sh /
 RUN sed -i "s@http://dl-cdn.alpinelinux.org/@https://mirrors.huaweicloud.com/@g" /etc/apk/repositories \
     && apk update \
-    && apk add --no-cache python3-dev build-base \
+    && apk add --no-cache build-base \
     && pip3 install --no-cache-dir cython -i https://pypi.douban.com/simple \
     && chmod 755 build.sh \
     && rm -rf /var/cache/apk/* /tmp/*
