@@ -22,4 +22,4 @@ WORKDIR /var/auth
 
 EXPOSE 5000
 
-CMD ["/usr/bin/supervisord"]
+CMD ["/usr/local/bin/supervisord"]
