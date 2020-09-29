@@ -16,7 +16,7 @@ marshmallow
 mongoengine
 redis
 hiredis
-celery
+celery==4.4.7
 blinker
 python-redis-lock
 pdfminer.six

@@ -16,7 +16,7 @@ marshmallow
 mongoengine
 redis
 hiredis
-celery
+celery==4.4.7
 blinker
 ta-lib
 pyexcel-xls
