@@ -6,6 +6,7 @@ flask_cors
 flask-apscheduler
 redis
 hiredis
+pymongo==3.7.2
 mongoengine
 lxml
 numpy
