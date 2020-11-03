@@ -40,3 +40,4 @@ mplfinance
 pandarallel
 pydotplus
 pyforest
+pysnooper
