@@ -9,6 +9,7 @@ requests
 apscheduler
 pymongo
 logbook
+loguru
 raven
 numpy
 pandas
