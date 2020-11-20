@@ -8,3 +8,4 @@ logbook
 redis
 pypinyin
 loguru
+watchdog
