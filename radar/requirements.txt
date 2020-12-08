@@ -9,3 +9,4 @@ redis
 pypinyin
 loguru
 watchdog
+regex
