@@ -11,9 +11,6 @@ hiredis
 mongoengine
 click
 watchdog
-grpcio
-grpcio-tools
-protobuf
 lxml
 numpy
 pandas

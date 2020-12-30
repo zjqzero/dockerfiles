@@ -27,6 +27,3 @@ baidu-aip
 jinja2
 lxml
 bs4
-rethinkdb
-grpcio
-protobuf
