@@ -21,4 +21,3 @@ RUN sed -i 's/archive.ubuntu.com/mirrors.163.com/g' /etc/apt/sources.list \
 ENTRYPOINT ["pyspider"]
 
 EXPOSE 5000
-# EXPOSE 5000 23333 24444 25555 se
