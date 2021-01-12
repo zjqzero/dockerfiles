@@ -19,4 +19,3 @@ hiredis
 celery
 blinker
 python-redis-lock
-pdfminer.six
