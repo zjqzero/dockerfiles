@@ -1,6 +1,6 @@
+ipython
 jupyter
 jupyterlab
-ipython
 jupyter_contrib_nbextensions
 numpy
 scipy
@@ -8,15 +8,12 @@ statsmodels
 matplotlib
 seaborn
 pandas
-yapf
-alphalens
 scikit-learn
+alphalens
 
 flask-caching
 requests
-apscheduler
 pymongo
-logbook
 loguru
 marshmallow
 mongoengine
@@ -31,13 +28,12 @@ pymysql
 lxml
 bs4
 dill
+yapf
 tushare
 
 pyecharts
-pdfminer.six
 baidu-aip
 mplfinance
 pandarallel
 pydotplus
-pyforest
 pysnooper
