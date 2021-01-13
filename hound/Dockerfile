@@ -6,9 +6,9 @@ ADD requirements.txt /requirements.txt
 ADD uwsgi.ini /etc/uwsgi.ini
 ADD supervisord.conf /etc/supervisord.conf
 RUN apk update \
-    && apk add --no-cache --purge -uU build-base libstdc++ libxslt tzdata poppler-utils \
-                                      linux-headers fortify-headers libxml2-dev libxslt-dev \
-                                      libc-dev musl-dev openssl-dev zlib-dev libffi-dev \
+    && apk add --no-cache --purge -uU build-base libstdc++ libxslt libxslt-dev libxml2-dev \
+                                      linux-headers fortify-headers poppler-utils poppler-data \
+                                      libc-dev musl-dev openssl-dev zlib-dev libffi-dev tzdata \
     && pip3 install --no-cache-dir numpy uwsgi supervisor -i https://pypi.douban.com/simple \
     && pip3 install --no-cache-dir -r /requirements.txt -i https://pypi.douban.com/simple \
     && apk del build-base linux-headers fortify-headers libxml2-dev libxslt-dev \
