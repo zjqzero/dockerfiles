@@ -16,6 +16,9 @@ rename_so_files() {
 
 cd /to_build
 
+ver="\"`date '+%y.%m%d.%H%M'`"\"
+sed -i "/^__version__ =/c__version__ = $ver" app/__init__.py
+
 python3 setup.py build_ext
 
 rename_so_files './build'
