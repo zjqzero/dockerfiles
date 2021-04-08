@@ -7,14 +7,14 @@ ADD uwsgi.ini /etc/uwsgi.ini
 ADD supervisord.conf /etc/supervisord.conf
 RUN sed -i "s@https://dl-cdn.alpinelinux.org/@https://mirrors.huaweicloud.com/@g" /etc/apk/repositories \
     && apk update \
-    && apk add --no-cache --purge -uU build-base libstdc++ libxslt tzdata cargo \
+    && apk add --no-cache --purge -uU build-base libstdc++ libxslt tzdata \
                                       linux-headers fortify-headers libxml2-dev libxslt-dev \
                                       libc-dev musl-dev openssl-dev zlib-dev libffi-dev \
     && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
     && echo "Asia/Shanghai" > /etc/timezone \
     && pip3 install --no-cache-dir wheel uwsgi supervisor -i https://pypi.douban.com/simple \
     && pip3 install --no-cache-dir -r /requirements.txt -i https://pypi.douban.com/simple \
-    && apk del build-base cargo linux-headers fortify-headers libxml2-dev libxslt-dev \
+    && apk del build-base linux-headers fortify-headers libxml2-dev libxslt-dev \
                libc-dev musl-dev openssl-dev zlib-dev libffi-dev \
     && rm -rf /var/cache/apk/* /tmp/* /requirements.txt
 
