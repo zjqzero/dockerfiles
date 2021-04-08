@@ -5,7 +5,7 @@ MAINTAINER zhoujunqian <zjqzero@gmail.com>
 ADD requirements.txt /requirements.txt
 ADD uwsgi.ini /etc/uwsgi.ini
 ADD supervisord.conf /etc/supervisord.conf
-RUN sed -i "s@http://dl-cdn.alpinelinux.org/@https://mirrors.huaweicloud.com/@g" /etc/apk/repositories \
+RUN sed -i "s@https://dl-cdn.alpinelinux.org/@https://mirrors.huaweicloud.com/@g" /etc/apk/repositories \
     && apk update \
     && apk add --no-cache libstdc++ libxslt tzdata \
                           build-base linux-headers fortify-headers libxml2-dev libxslt-dev \
